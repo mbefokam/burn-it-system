@@ -10,11 +10,11 @@
         </div>
         <div>
             <div class="innerwhitebox3">
-                <input type="button" value="Breakfast Max 500 Calories" name="breakfast" class="breakfast" ng-click="vm.route('BF')">
-                <input type="button" value="First Snack Max 200 calories" name="firstsnack" class="firstsnack" ng-click="vm.route('FS')">
-                <input type="button" value="Lunch Max 500 Calories " name="lunch" class="lunch" ng-click="vm.route('LN')">
-                <input type="button" value="Second Snack Max 200 calories" name="ssnack" class="secondsnack" ng-click="vm.route('SS')">
-                <input type="button" value="Dinner Max 500 Calories" name="diner" class="dinner" ng-click="vm.route('DN')"> </div>
+                <input type="button" value="Breakfast Max {{vm.bcalories}} Calories" name="breakfast" class="breakfast" ng-click="vm.route('BF')">
+                <input type="button" value="First Snack Max {{vm.fscalories}} calories" name="firstsnack" class="firstsnack" ng-click="vm.route('FS')">
+                <input type="button" value="Lunch Max {{vm.lcalories}} Calories " name="lunch" class="lunch" ng-click="vm.route('LN')">
+                <input type="button" value="Second Snack Max {{vm.sscalories}} calories" name="ssnack" class="secondsnack" ng-click="vm.route('SS')">
+                <input type="button" value="Dinner Max {{vm.dcalories}} Calories" name="diner" class="dinner" ng-click="vm.route('DN')"> </div>
             <div class="vertical-menu">
 
             <table  class="table table-hover">

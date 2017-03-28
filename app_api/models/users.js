@@ -18,7 +18,7 @@ var userSchema = new mongoose.Schema({
         profile: {
             first_name: String
             , last_name: String
-            , user_name: String
+            //, user_name: String
                 
             , age: String
             , height: String
@@ -56,6 +56,7 @@ var userSchema = new mongoose.Schema({
 	  ]
     }
 });
+userSchema.index({email:1},{unique: true});
 userSchema.methods.setPassword = function (password) {
     this.salt = crypto.randomBytes(16).toString('hex');
     this.hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64).toString('hex');
