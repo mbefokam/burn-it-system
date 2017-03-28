@@ -20,7 +20,7 @@
         vm.current_weigth;
         var stringArray = new Array();
         var caloriesDif = 0;
-
+        var caloriesDifs = 0;
         (function () {
             $http.get('../../documents/objects/weekObject.json').then(function (response) {
                 weekData = response.data;
@@ -59,25 +59,16 @@
                     vm.idealweightsmall = vm.idealweightsmallTemp.substring(0,vm.idealweightsmallTemp.length -2);
                     vm.idealweightheigh = vm.idealweightheighTemp.substring(0,vm.idealweightheighTemp.length -2);
                     vm.current_weigth = userData.userObject.planning.current_weigth;
-                    console.log("***********************");
-                    console.log(vm.idealweightheigh);
-                    console.log(vm.idealweightsmall);
-                    console.log(vm.current_weigth);
-                    console.log("***********************");
-                    console.log(vm.current_weigth - vm.idealweightheigh);
                     caloriesDif = vm.current_weigth - vm.idealweightheigh;
-                    console.log("***********************");
-                    for (var i=0; i< 4; i++){
+                    caloriesDifs = vm.current_weigth - vm.idealweightsmall;
                         
-                    if (  1 <= caloriesDif && caloriesDif<= 5){
+                    if (  vm.idealweightsmall <= vm.current_weigth && vm.current_weigth<= vm.idealweightheigh){
                       vm.bcalories = 500;
                       vm.fscalories = 250;
                       vm.lcalories = 500;
                       vm.sscalories = 250;
                       vm.dcalories = 500;
                     }
-                    
-                    
                     else if (  5 < caloriesDif && caloriesDif <= 10){
                       vm.bcalories = 500;
                       vm.fscalories = 150;
@@ -106,21 +97,20 @@
                       vm.sscalories = 100;
                       vm.dcalories = 200;
                     }
-                    else if (  -10 <= caloriesDif && caloriesDif <= 0){
+                    else if (  -10 <= caloriesDifs && caloriesDifs <= 0){
                       vm.bcalories = 700;
                       vm.fscalories = 300;
                       vm.lcalories = 500;
                       vm.sscalories = 300;
                       vm.dcalories = 700;
                     }
-                    else {
+                    else if (caloriesDifs <= -11){
                       vm.bcalories = 700;
                       vm.fscalories = 500;
                       vm.lcalories = 700;
                       vm.sscalories = 500;
                       vm.dcalories = 700;
                     }  
-                    }
                     
                 }
             }
@@ -128,7 +118,6 @@
 
 
         vm.go = function (obj) {
-            //console.log(obj);
             vm.currentSelectedDay = obj.day;
             week = obj ;
           };
