@@ -1,4 +1,6 @@
 var express = require('express');
+var redisClient= require('redis').createClient;
+var redis = redisClient(6379, 'localhost');
 var router = express.Router();
 var jwt = require('express-jwt');
 var auth = jwt({

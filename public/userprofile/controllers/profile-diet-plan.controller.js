@@ -18,8 +18,8 @@
                 diet = response.data;
                 });  
                 }else{
-                    userData = data.data.userObject;
-                    diet = data.data.userObject.deit[1];
+                userData = data.data.userObject;
+                diet = data.data.userObject.deit[1];
                 vm.mondayCal = calculateCal (diet.monday);
                 vm.tuesadayCal = calculateCal (diet.tuesday);
                 vm.wednesdayCal = calculateCal (diet.wednesday);
