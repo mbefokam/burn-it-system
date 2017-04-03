@@ -12,7 +12,15 @@
         var userData;
         vm.daylyFood;
         var weekData;
-
+        vm.ideal_weight;
+        vm.idealweightsmall ;
+        vm.idealweightheigh ;
+         vm.idealweightsmallTemp ;
+        vm.idealweightheighTemp ;
+        vm.current_weigth;
+        var stringArray = new Array();
+        var caloriesDif = 0;
+        var caloriesDifs = 0;
         (function () {
             $http.get('../../documents/objects/weekObject.json').then(function (response) {
                 weekData = response.data;
@@ -34,7 +42,7 @@
             }, {
                 "day": "Sunday"
             }];
-
+            
             for (var x = 0; x < 2; x++) {
                 if (x < 1) {
                     if (CommonSvc.getUserData() == undefined) {
@@ -44,14 +52,72 @@
                     }
                 } else {
                     userData = CommonSvc.getUserData();
-
+                    vm.ideal_weight = userData.userObject.planning.ideal_weight;
+                    stringArray = vm.ideal_weight.split(" ");
+                    vm.idealweightsmallTemp = stringArray[0];
+                    vm.idealweightheighTemp = stringArray[2];  
+                    vm.idealweightsmall = vm.idealweightsmallTemp.substring(0,vm.idealweightsmallTemp.length -2);
+                    vm.idealweightheigh = vm.idealweightheighTemp.substring(0,vm.idealweightheighTemp.length -2);
+                    vm.current_weigth = userData.userObject.planning.current_weigth;
+                    caloriesDif = vm.current_weigth - vm.idealweightheigh;
+                    caloriesDifs = vm.current_weigth - vm.idealweightsmall;
+                        
+                    if (  vm.idealweightsmall <= vm.current_weigth && vm.current_weigth<= vm.idealweightheigh){
+                      vm.bcalories = 500;
+                      vm.fscalories = 250;
+                      vm.lcalories = 500;
+                      vm.sscalories = 250;
+                      vm.dcalories = 500;
+                    }
+                    else if (  5 < caloriesDif && caloriesDif <= 10){
+                      vm.bcalories = 500;
+                      vm.fscalories = 150;
+                      vm.lcalories = 500;
+                      vm.sscalories = 150;
+                      vm.dcalories = 500;
+                    }
+                    else if (  10 < caloriesDif && caloriesDif <= 20){
+                      vm.bcalories = 500;
+                      vm.fscalories = 100;
+                      vm.lcalories = 500;
+                      vm.sscalories = 100;
+                      vm.dcalories = 500;
+                    }
+                    else if (  20 < caloriesDif && caloriesDif<= 50){
+                      vm.bcalories = 400;
+                      vm.fscalories = 100;
+                      vm.lcalories = 400;
+                      vm.sscalories = 100;
+                      vm.dcalories = 400;
+                    }
+                    else if ( caloriesDif >= 50 ){
+                      vm.bcalories = 200;
+                      vm.fscalories = 100;
+                      vm.lcalories = 200;
+                      vm.sscalories = 100;
+                      vm.dcalories = 200;
+                    }
+                    else if (  -10 <= caloriesDifs && caloriesDifs <= 0){
+                      vm.bcalories = 700;
+                      vm.fscalories = 300;
+                      vm.lcalories = 500;
+                      vm.sscalories = 300;
+                      vm.dcalories = 700;
+                    }
+                    else if (caloriesDifs <= -11){
+                      vm.bcalories = 700;
+                      vm.fscalories = 500;
+                      vm.lcalories = 700;
+                      vm.sscalories = 500;
+                      vm.dcalories = 700;
+                    }  
+                    
                 }
             }
         })();
 
 
         vm.go = function (obj) {
-            //console.log(obj);
             vm.currentSelectedDay = obj.day;
             week = obj ;
           };
@@ -99,7 +165,7 @@
                     resolve: {
                         callerData: function () {
                             return {
-                                "maxCal": 500,
+                                "maxCal": vm.bcalories,
                                 "day": week.day,
                                 "meal": "breakfast"
                             };
@@ -124,7 +190,7 @@
                     resolve: {
                         callerData: function () {
                             return {
-                                "maxCal": 200,
+                                "maxCal": vm.fscalories,
                                 "day": week.day,
                                 "meal": "firstSnack"
                             };
@@ -149,7 +215,7 @@
                     resolve: {
                         callerData: function () {
                             return {
-                                "maxCal": 500,
+                                "maxCal": vm.lcalories,
                                 "day": week.day,
                                 "meal": "lunch"
                             };
@@ -174,7 +240,7 @@
                     resolve: {
                         callerData: function () {
                             return {
-                                "maxCal": 200,
+                                "maxCal": vm.sscalories,
                                 "day": week.day,
                                 "meal": "secondSnack"
                             };
@@ -200,7 +266,7 @@
                     resolve: {
                         callerData: function () {
                             return {
-                                "maxCal": 500,
+                                "maxCal": vm.dcalories,
                                 "day": week.day,
                                 "meal": "diner"
                             };

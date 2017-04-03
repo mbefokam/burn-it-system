@@ -1,0 +1,190 @@
+{
+    "email": "lou23@gmail.com",
+    "name":"test name",
+    "password": "123",
+	"userObject": {
+	"profile": {
+		"first_name": "",
+		"last_name": "",
+		"user_name": "",
+		"age": "21",
+		"height": "170",
+		"weight": "78",
+		"gender": "m",
+		"address": "new york street NJ 01139",
+		"phone_number": "111 928 1111",
+		"zipcode": "01139",
+		"photo": {
+			"thumb": "welcom"
+		}
+	},
+	"planning": {
+		"status": "good health",
+		"risk": "none",
+		"current_weigth": "78",
+		"ideal_weight": "65"
+	},
+	"nutritionists": [
+		{
+			"name": "first nutritionist",
+			"address": "bronx new york",
+			"phone_number": "233444"
+		}
+	],
+	"work_out": [
+		{
+			"name": "thomas joe",
+			"address": "",
+			"phone_number": ""
+		}
+	],
+	 "deit" : [
+                        {
+                                "sunday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "saturday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "friday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "thursday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "wednesday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "tuesday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "monday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                }
+                        },
+                        {
+                                "sunday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "saturday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "friday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "thursday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "wednesday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "tuesday" : {
+                                        "diner" : [ ],
+                                        "second_snack" : [ ],
+                                        "lunch" : [ ],
+                                        "first_snack" : [ ],
+                                        "breakfast" : [ ]
+                                },
+                                "monday" : {
+                                        "diner" : [
+                                                {
+                                                        "numberofCal" : 205,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/784_thumb.jpg",
+                                                        "food_name" : "rice"
+                                                }
+                                        ],
+                                        "second_snack" : [
+                                                {
+                                                        "numberofCal" : 187,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/9_thumb.jpg",
+                                                        "food_name" : "chicken"
+                                                }
+                                        ],
+                                        "lunch" : [
+                                                {
+                                                        "numberofCal" : 77,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/227_thumb.jpg",
+                                                        "food_name" : "bread"
+                                                },
+                                                {
+                                                        "numberofCal" : 71,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/775_thumb.jpg",
+                                                        "food_name" : "eggs"
+                                                }
+                                        ],
+                                        "first_snack" : [
+                                                {
+                                                        "numberofCal" : 68,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/719_thumb.jpg",
+                                                        "food_name" : "orange"
+                                                }
+                                        ],
+                                        "breakfast" : [
+                                                {
+                                                        "numberofCal" : 205,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/784_thumb.jpg",
+                                                        "food_name" : "rice"
+                                                },
+                                                {
+                                                        "numberofCal" : 187,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/9_thumb.jpg",
+                                                        "food_name" : "chicken"
+                                                },
+                                                {
+                                                        "numberofCal" : 68,
+                                                        "thumb" : "https://d2xdmhkmkbyw75.cloudfront.net/719_thumb.jpg",
+                                                        "food_name" : "orange"
+                                                }
+                                        ]
+                                }
+                        }
+                ]}
+}

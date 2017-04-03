@@ -2,6 +2,8 @@
  var router = express.Router();
  var request = require("request");
  var empty = require('is-empty');
+ var mongojs = require('mongojs');
+ var db = mongojs('fooddb',['fooddb']); 
 
  router.post('/deit', function (req, res) {
      if (empty(req.body.query)) {
@@ -23,6 +25,10 @@
                  res.send(response.statusCode);
              }
              else {
+                
+                 console.log(body.foods[0].food_name);
+                 console.log(body.foods[0].nf_calories);
+                 db.fooddb.save({food: body.foods[0].food_name, calories: body.foods[0].nf_calories});
                  res.send(response.statusCode, body);
              }
          });

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-
+var redis = require('redis');
 module.exports.profileRead = function(req, res) {
 
   if (!req.payload._id) {
@@ -15,5 +15,4 @@ module.exports.profileRead = function(req, res) {
         res.status(200).json(user);
       });
   }
-
 };

@@ -1,5 +1,3 @@
-
-
 .thTable,
 .tdTable {
     border: 1px solid black;
@@ -453,8 +451,6 @@ p {
     margin-bottom: 16px;
     padding: 16px 48px;
     border: 1px solid #000;
-
-
 }
 */
 
@@ -636,6 +632,22 @@ p {
     /* margin-bottom: 48px;*/
     text-align: center;
 }
+.innerwhitebox2 {
+    position: absolute;
+    background: #ffffff;
+    border: 2px solid #000000;
+    width: 400px;
+    height: 200px;
+    top: 150px;
+    bottom: 200px;
+    left: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    /* margin-bottom: 48px;*/
+    text-align: center;
+}
+
 
 .foodname {
     border-radius: 10px;
@@ -680,19 +692,7 @@ p {
     text-decoration-color: white;
 }
 
-.searchbutton {
-    border-radius: 5px;
-    color: white;
-    position: absolute;
-    background: #008CFF;
-    font: 16px;
-    border: 2px solid #000000;
-    top: 70%;
-    left: 40%;
-    height: 11%;
-    width: 20%;
-    text-decoration-color: white;
-}
+
 
 .searchbutton3 {
     border-radius: 5px;
@@ -727,6 +727,20 @@ p {
     border: 2px solid #000000;
     top: 87%;
     left: 52%;
+    height: 11%;
+    width: 20%;
+    text-decoration-color: white;
+}
+
+.searchbutton {
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    background: #008CFF;
+    font: 16px;
+    border: 2px solid #000000;
+    top: 70%;
+    left: 25%;
     height: 11%;
     width: 20%;
     text-decoration-color: white;

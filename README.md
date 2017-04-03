@@ -1,11 +1,14 @@
-# burn-it-system
-Health and Diet Management Web Application
-This application is a health Care System to help user keep track of the amount of calories they consume per day. 
-The MEAN stack is intensively used to build this application
-The Developmenmt Methodology of this project is Based of Behavior Driven Design on top of Test Driven Design.
-BDD and TDD tools utilized here are based of Cucumber Ecosystem. 
+# notes
 
-Note: This is an open source project, contact the admin if you would like to be part of the dev effort
+A simple app for keeping a healthier life. 
 
-Disclaimer: The use of any portion of this software for commercial purpose is strickly forbitten. User are free to use this software or portion
-of this software for Academic puprose, research and personal training . 
+## Contributing
+
+
+## License
+
+NJIT
+
+
+
+2017 Pierre A Mbe Fokam

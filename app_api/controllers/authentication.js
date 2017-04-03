@@ -9,19 +9,14 @@ var sendJSONresponse = function(res, status, content) {
 
 module.exports.register = function(req, res) {
 
-  // if(!req.body.name || !req.body.email || !req.body.password) {
-  //   sendJSONresponse(res, 400, {
-  //     "message": "All fields required"
-  //   });
-  //   return;
-  // }
 
   var user = new User();
 
   user.name = req.body.name;
   user.email = req.body.email;
-  user.userObject = req.body.userObject;
-  console.log(user);
+  if (validateEmail(user.email)){
+    user.userObject = req.body.userObject;
+
   user.setPassword(req.body.password);
 
   user.save(function(err) {
@@ -29,21 +24,22 @@ module.exports.register = function(req, res) {
     token = user.generateJwt();
     res.status(200);
     res.json({
-     //user
-     "token" : token
+      "token" : token
     });
-  });
+  });  
+  }else{
+    res.status(500);
+    res.json({
+      "Bad Email" : "Please make sure your email is valid"
+    });  
+  }
+  
 
 };
 
 module.exports.login = function(req, res) {
 
-  // if(!req.body.email || !req.body.password) {
-  //   sendJSONresponse(res, 400, {
-  //     "message": "All fields required"
-  //   });
-  //   return;
-  // }
+  
 
   passport.authenticate('local', function(err, user, info){
     var token;
@@ -59,8 +55,7 @@ module.exports.login = function(req, res) {
       token = user.generateJwt();
       res.status(200);
       res.json({
-         // user
-         "token" : token
+        "token" : token
       });
     } else {
       // If user is not found
@@ -69,3 +64,7 @@ module.exports.login = function(req, res) {
   })(req, res);
 
 };
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
