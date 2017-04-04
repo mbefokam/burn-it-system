@@ -19,8 +19,8 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../../',
-
+   // basePath: '../../',
+    basePath: '',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -29,14 +29,43 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/vendor/angular.min.js',
-      'test/angular-mocks.js',
-      'app/js/**/*.js',
-      'node_modules/jasmine-sinon/lib/jasmine-sinon.js',
-      'test/unit/app/js/**/*.spec.js'
+    //  'public/app/vendor/angular.min.js',
+    //  'test/angular-mocks.js',
+    //  'app/js/**/*.js',
+    //  'node_modules/jasmine-sinon/lib/jasmine-sinon.js',
+   //   'test/unit/app/js/**/*.spec.js',
+   //   'public/angular/angular.js',
+   //   'public/angular-route/angular-route.min.js',
+   //   'public/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+        // Load app Module Files
+   //     'public/app.module.js',
+       // Load Module Files
+   //   'public/main/main.module.js',
+   //   'public/deitPlan/deitplan.module.js',
+   //   'public/main/main.module.js',
+   //   'public/login/login.module.js',
+   //   'public/nutritionists/nutritionists.module.js',
+   //   'public/planning/planning.module.js',
+   //   'public/services/*.js', 
+   //   'public/trackfood/trackfood.module.js',
+   //   'public/userprofile/profile.module.js',
+   //   'public/workout/workout.module.js',
+        // Controller Files
+   //   'public/deitPlan/controllers/*.js',
+   //   'public/login/controllers/*.js', 
+   //   'public/main/controllers/*.js',
+   //   'public/nutritionists/controllers/*.js', 
+   //   'public/planning/controllers/*.js', 
+   //   'public/trackfood/controllers/*.js', 
+   //   'public/userprofile/controllers/*.js', 
+   //   'public/workout/controllers/*.js',
+        // Cucumber features
+  //    'test/unit/features/*.feature'
+        'public/trackfood/controllers/*.js',
+        'features/*.feature'
     ],
 
-
+ 
     // list of files to exclude
     exclude: [
     ],
